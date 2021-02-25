@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>Inscription</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label position="floating">Nom</ion-label>
+        <ion-input type="String"  required></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Prénom</ion-label>
+        <ion-input type="String" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Adresse</ion-label>
+        <ion-input type="String" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Tél</ion-label>
+        <ion-input type="number" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email"  required></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Mot de passe</ion-label>
+        <ion-input type="password" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Confirmer le mot de passe</ion-label>
+        <ion-input type="password" required></ion-input>
+    </ion-item>
+
+
+    <ion-button expand="block" class="class=" ion-padding color="primary" [routerLink]="['/home']">Inscription</ion-button>
+
+</ion-content>

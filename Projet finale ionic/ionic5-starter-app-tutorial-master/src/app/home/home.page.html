@@ -1,0 +1,49 @@
+<ion-header [translucent]="true" class="ion-no-border">
+    <ion-toolbar>
+        <ion-title>
+            Contacts
+        </ion-title>
+        <ion-buttons color="primary" collapse="true" slot="end">
+            <ion-button color="primary" (click)="openNewContactModal()">
+                <ion-icon color="primary" slot="icon-only" name="add-outline">+</ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<!-- https://ionicframework.com/docs/api/title#collapsible-large-titles -->
+<ion-content fullscreen="true">
+    <ion-header collapse="condense" class="ion-no-border">
+        <ion-toolbar>
+            <ion-title size="large">Contacts</ion-title>
+            <ion-buttons collapse="true" slot="end">
+                <ion-button color="primary" (click)="openNewContactModal()">
+                    <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-segment (ionChange)="filterContacts($event)" value="All">
+        <ion-segment-button value="All" checked>
+            Tous
+        </ion-segment-button>
+        <ion-segment-button value="Friend">
+            Amis
+        </ion-segment-button>
+        <ion-segment-button value="Family">
+            Famille
+        </ion-segment-button>
+    </ion-segment>
+
+    <ion-list>
+        <ion-item *ngFor="let contact of contacts | async" [routerLink]="'/contact-details/' + contact.id">
+            <ion-label>{{ contact.firstName }} {{ contact.lastName }}</ion-label>
+
+        </ion-item>
+        <ion-button expand="block" ion-padding color="primary" href="http://localhost:8100">Message</ion-button>
+    </ion-list>
+
+
+
+</ion-content>

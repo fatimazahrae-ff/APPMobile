@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>Se Connecter</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input type="email" required></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">Mot de passe</ion-label>
+        <ion-input type="password" required></ion-input>
+    </ion-item>
+    <ion-button expand="block" class="class=" ion-padding color="primary" [routerLink]="['/home']"> Connexion</ion-button>
+
+    <ion-button expand="block" class="class=" ion-padding color="primary" [routerLink]="['/register']">Inscription</ion-button>
+</ion-content>

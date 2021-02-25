@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+    <form [formGroup]="loginForm">
+
+        <ion-card>
+
+            <ion-card-header>
+                <ion-card-title color="success">
+                    <em>Se Connecter</em>
+                </ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+
+                <ion-list>
+
+                    <ion-item>
+                        <ion-label position="floating"> Email:
+                            <ion-text color="danger"> *</ion-text>
+                        </ion-label>
+                        <ion-input formControlName="email" clear-input="true" type="email" placeholder="Email..."></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label position="floating">Mot de passe
+                            <ion-text color="danger"> *</ion-text>
+                        </ion-label>
+                        <ion-input formControlName="password" clear-input="true" type="password" placeholder="Password..."></ion-input>
+                    </ion-item>
+
+                    <ion-button (click)="sigin()" [disabled]="!loginForm.valid" shape="round" color="primary">
+                        <ion-icon slot="end" name="log-in"></ion-icon>Inscription</ion-button>
+                    <ion-button routerLink="/register" fill="clear" color="primary">Cree un compte ?</ion-button>
+
+                </ion-list>
+
+            </ion-card-content>
+
+        </ion-card>
+
+    </form>
+
+</ion-content>

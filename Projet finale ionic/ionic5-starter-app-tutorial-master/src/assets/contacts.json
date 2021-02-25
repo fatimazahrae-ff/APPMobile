@@ -1,0 +1,17 @@
+[{
+        "id": 1,
+        "firstName": "fati",
+        "lastName": "jalal",
+        "email": "fatiadm01@gmail@gmail.com",
+        "phone": "069142578",
+        "category": "Family"
+    },
+    {
+        "id": 2,
+        "firstName": "Zineb",
+        "lastName": "fakiri",
+        "email": "zineb072@gmail.com",
+        "phone": "0648512369",
+        "category": "Amis"
+    }
+]

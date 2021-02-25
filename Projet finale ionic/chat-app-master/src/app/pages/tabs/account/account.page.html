@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>chat-app</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+    <ion-card>
+      
+        <ion-card-header>
+            <ion-card-title color="success">
+             <em>Account</em>
+            </ion-card-title>
+            <br>
+            <img *ngIf="!user.picture" src="assets/img/user-default.png"  width="100px" height="200px">
+            <img *ngIf="user.picture" src="{{user.picture}}">
+          </ion-card-header>
+
+      <ion-card-content>
+        <ion-list>
+            <ion-item> 
+                <b>Name</b>: {{user.name}}
+              </ion-item>
+              <ion-item> 
+                  <b>Email</b>: {{user.email}}
+                </ion-item>
+        </ion-list>        
+
+        <ion-button color="primary" shape= "round" (click)='update()'><ion-icon slot="end" name="image"></ion-icon>Change Picture</ion-button>
+        <ion-button color="danger" shape= "round"  (click)='logout()'><ion-icon slot="end" name="log-out"></ion-icon>Logout</ion-button> 
+
+      </ion-card-content>
+
+    </ion-card>
+
+</ion-content>
